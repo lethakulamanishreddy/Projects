@@ -1,0 +1,32 @@
+a = systolic_pressure
+b = diastolic_pressure
+c = blood_viscosity
+d = heart_rate
+
+if(150<a<180    &&  90<b<100  &&   0.35<c<0.4   &&    95<d<120)
+{
+	output is ANGRY
+}
+
+
+if(130<a<160    &&  85<b<95  &&   0.3<c<0.35   &&    77<d<83)
+{
+	output is DEPRESSED
+}
+
+
+if(115<a<130    &&  78<b<85  &&   0.32<c<0.34   &&    60<d<76)
+{
+	output is HAPPY
+}
+
+
+if(120<a<140    &&  80<b<90  &&   0.35<c<0.4   &&    70<d<85)
+{
+	output is SAD
+}
+
+if(125<a<170    &&  88<b<95  &&   0.3<c<0.38   &&    60<d<90)
+{
+	output is STRESSED
+}

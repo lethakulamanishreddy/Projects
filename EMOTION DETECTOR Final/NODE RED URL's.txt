@@ -1,0 +1,7 @@
+Nodered editor
+https://emotion-detector.eu-gb.mybluemix.net/red/#
+
+
+
+final url
+https://emotion-detector.eu-gb.mybluemix.net/ui/

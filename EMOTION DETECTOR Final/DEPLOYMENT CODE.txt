@@ -1,0 +1,27 @@
+from watson_machine_learning_client import WatsonMachineLearningAPIClient
+
+wml_credentials={
+  "url": "https://us-south.ml.cloud.ibm.com",
+  "access_key": "rHGx7b_cEoJaaKN2Lx6LwguMgv26s_eNwM0V9bLQprm5",
+  "username": "ddcf32b9-d232-4ce7-ba68-102e383c86f6",
+  "password": "80b3ebf2-610e-44aa-974a-5458fc7efb76",
+  "instance_id": "ea024272-816b-4cf4-9422-22ef0fadc401"
+}
+
+client = WatsonMachineLearningAPIClient(wml_credentials) 
+
+model_props = {client.repository.ModelMetaNames.AUTHOR_NAME: "Ramya", 
+               client.repository.ModelMetaNames.AUTHOR_EMAIL:"gramya88@gmail.com", 
+               client.repository.ModelMetaNames.NAME: "USAHouseprediction"}
+
+model_artifact =client.repository.store_model(classifier, meta_props=model_props)
+
+published_model_uid = client.repository.get_model_uid(model_artifact)
+
+published_model_uid
+
+deploy= client.deployments.create(published_model_uid, name ="Purchased") 
+
+scoring_endpoint = client.deployments.get_scoring_url(deploy)
+
+scoring_endpoint
